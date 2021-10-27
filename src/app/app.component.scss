@@ -1,0 +1,50 @@
+.header__content {
+  width: 100%;
+  min-width: 320px;
+  height: 200px;
+  background-color: #AD3491;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  h1 {
+    color: white;
+  }
+
+  div {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 20px 0px;
+    width: 40%;
+    min-width: 320px;
+  }
+
+  .btn--login, .btn--signin{
+    background-color: #3DADAB;
+    color: white;
+    width: 80px;
+    height: 30px;
+    cursor: pointer;
+    border-radius: 3px;
+    border: 3px solid #3DADAB;
+  }
+}
+
+.main__content--forms {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  min-width: 320px;
+  height: 400px;
+  padding: 30px 0px;
+  background-color: #FA63D8;
+
+  .content__form--login, .content__form--signin {
+    width: 70%;
+    height: 50px;
+    margin: 30px 0px;
+    background-color: white;
+  }
+}
