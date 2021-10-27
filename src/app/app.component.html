@@ -8,6 +8,19 @@
 <main class="main__content--forms">
   <div class="content__form--login" *ngIf="visibleLogin">
     <p>Formulario de registro</p>
+    <form (ngSubmit)="onLogin()">
+      <div class="form__login">
+        <label for="name">Nombre completo</label>
+        <input required type="text" id="name" name="name" [(ngModel)]="login.name">
+        <label for="birthday">Fecha de nacimiento</label>
+        <input required type="date" id="birthday" name="birthday" [(ngModel)]="login.birthday">
+        <label for="email">Correo</label>
+        <input required type="email" id="email" name="email" [(ngModel)]="login.email">
+        <label for="password">Contraseña</label>
+        <input required type="password" id="password" name="password" [(ngModel)]="login.password">
+      </div>
+      <button type="submit">Registrar</button>
+    </form>
   </div>
   <div class="content__form--signin" *ngIf="visibleSignin">
     <p>Formulario de iniciar sesion</p>
