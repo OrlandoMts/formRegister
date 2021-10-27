@@ -7,4 +7,16 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'form-register';
+
+  visibleLogin: boolean = true;
+  visibleSignin: boolean = false;
+
+  showLogin() {
+    this.visibleLogin = !this.visibleLogin;
+  }
+
+  showSignin(){
+    this.visibleSignin = !this.visibleSignin;
+    this.visibleLogin = !this.visibleLogin;
+  }
 }

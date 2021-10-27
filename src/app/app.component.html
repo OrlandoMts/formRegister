@@ -1,15 +1,15 @@
 <header class="header__content">
   <h1>Titulo pendiente de poner</h1>
   <div class="content--buttons">
-    <button class="btn--login">Login</button>
-    <button class="btn--signin">Sign in</button>
+    <button class="btn--login" (click)="showLogin()">Login</button>
+    <button class="btn--signin" (click)="showSignin()">Sign in</button>
   </div>
 </header>
 <main class="main__content--forms">
-  <div class="content__form--login">
+  <div class="content__form--login" *ngIf="visibleLogin">
     <p>Formulario de registro</p>
   </div>
-  <div class="content__form--signin">
+  <div class="content__form--signin" *ngIf="visibleSignin">
     <p>Formulario de iniciar sesion</p>
   </div>
 </main>
