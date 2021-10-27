@@ -23,10 +23,26 @@
         <input required type="password" id="password" name="password" [(ngModel)]="login.password" #passwordInput="ngModel">
         <span *ngIf="passwordInput.invalid">Campo requerido</span>
       </div>
-      <button class="form__login--btn" [disabled]="myFormRegister.invalid" type="submit">Registrar</button>
+      <button class="form__login--btn" [disabled]="myFormRegister.invalid"
+        type="submit" [class.active]="myFormRegister.invalid"
+        >Registrar</button>
     </form>
   </div>
   <div class="content__form--signin" *ngIf="visibleSignin">
-    <p>Formulario de iniciar sesion</p>
+    <p>Entra a la aplicacion secreta</p>
+    <form #myFormSignin="ngForm" (ngSubmit)="onSignin()">
+      <div class="form__login">
+        <label for="email">Correo</label>
+        <input required type="email" id="email" name="email" [(ngModel)]="signin.email" #emailInputS="ngModel">
+        <span *ngIf="emailInputS.invalid">Campo requerido</span>
+        <label for="password">Contraseña</label>
+        <input required type="password" id="password" name="password" [(ngModel)]="signin.password" #passwordInputS="ngModel">
+        <span *ngIf="passwordInputS.invalid">Campo requerido</span>
+      </div>
+      <button
+      class="form__signin--btn" [disabled]="myFormSignin.invalid"
+      type="submit" [class.active]="myFormSignin.invalid"
+      >Registrar</button>
+    </form>
   </div>
 </main>

@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'form-register';
 
-  visibleLogin: boolean = true;
+  visibleLogin: boolean = true; //debe ser true
   visibleSignin: boolean = false; //debe ir en false
 
   login = {
@@ -20,16 +20,21 @@ export class AppComponent {
 
   signin = {
     email: '',
-    pasword: ''
+    password: ''
   }
 
   showLogin() {
-    this.visibleLogin = !this.visibleLogin;
+    if(this.visibleSignin) {
+      this.visibleSignin = false;
+      this.visibleLogin = !this.visibleLogin;
+    }
   }
 
   showSignin(){
-    this.visibleSignin = !this.visibleSignin;
-    this.visibleLogin = !this.visibleLogin;
+    if (this.visibleLogin){
+      this.visibleLogin = false;
+      this.visibleSignin = !this.visibleSignin;
+    }
   }
 
   onLogin(){
@@ -38,6 +43,15 @@ export class AppComponent {
     this.login = {
       name: '',
       birthday: '',
+      email: '',
+      password: ''
+    }
+  }
+
+  onSignin(){
+    // console.log(this.login);
+    alert("Te extrañamos 😞");
+    this.signin = {
       email: '',
       password: ''
     }

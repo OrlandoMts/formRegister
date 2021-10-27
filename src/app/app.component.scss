@@ -37,7 +37,7 @@
   align-items: center;
   width: 100%;
   min-width: 320px;
-  height: 400px;
+  height: 100vh;
   padding: 30px 0px;
   background-color: #FA63D8;
 
@@ -45,14 +45,16 @@
     width: 70%;
     height: auto;
     margin: 30px 0px;
+    border-radius: 7px;
     padding: 15px;
     background-color: white;
   }
 
   .content__form--signin {
     width: 70%;
-    height: 50px;
+    height: auto;
     margin: 30px 0px;
+    border-radius: 7px;
     padding: 15px;
     background-color: white;
   }
@@ -69,12 +71,25 @@ span {
   font-size: small;
 }
 
-.form__login--btn {
+.form__login--btn,  .form__signin--btn{
   background-color: #3DADAB;
   color: white;
   width: 80px;
   height: 30px;
+  margin: 15px 0px 10px 5px;
   cursor: pointer;
   border-radius: 3px;
   border: 3px solid #3DADAB;
+  &.active {
+    opacity: 0.5;
+  }
+}
+
+@media screen and (min-width: 720px) {
+
+  .content--buttons .btn--login, .content--buttons .btn--signin {
+    width: 150px;
+    height: 50px;
+  }
+
 }
