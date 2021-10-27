@@ -9,7 +9,7 @@ export class AppComponent {
   title = 'form-register';
 
   visibleLogin: boolean = true;
-  visibleSignin: boolean = true; //debe ir en false
+  visibleSignin: boolean = false; //debe ir en false
 
   login = {
     name: '',
@@ -33,6 +33,13 @@ export class AppComponent {
   }
 
   onLogin(){
-    console.log(this.login);
+    // console.log(this.login);
+    alert("Registrado. ¡Ya puedes iniciar sesion!");
+    this.login = {
+      name: '',
+      birthday: '',
+      email: '',
+      password: ''
+    }
   }
 }
